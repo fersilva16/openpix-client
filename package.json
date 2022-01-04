@@ -9,9 +9,7 @@
   "bugs": {
     "url": "https://github.com/fersilva16/openpix-client/issues"
   },
-  "homepage": "https://github.com/fersilva16/fersilva.dev#readme",
+  "homepage": "https://github.com/fersilva16/openpix-client#readme",
   "license": "MIT",
-  "scripts": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "packageManager": "yarn@3.1.1"
 }
