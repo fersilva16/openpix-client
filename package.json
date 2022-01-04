@@ -11,5 +11,8 @@
   },
   "homepage": "https://github.com/fersilva16/openpix-client#readme",
   "license": "MIT",
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "devDependencies": {
+    "typescript": "^4.5.4"
+  }
 }
