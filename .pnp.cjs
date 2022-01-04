@@ -42,7 +42,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-airbnb-typescript", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:16.1.0"],
             ["eslint-config-prettier", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:8.3.0"],
             ["eslint-plugin-import", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:2.25.4"],
+            ["nano-staged", "npm:0.5.0"],
             ["prettier", "npm:2.5.1"],
+            ["simple-git-hooks", "npm:2.7.0"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -1681,6 +1683,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["nano-staged", [
+        ["npm:0.5.0", {
+          "packageLocation": "./.yarn/cache/nano-staged-npm-0.5.0-3c7f7e5218-452a73347d.zip/node_modules/nano-staged/",
+          "packageDependencies": [
+            ["nano-staged", "npm:0.5.0"],
+            ["picocolors", "npm:1.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["natural-compare", [
         ["npm:1.4.0", {
           "packageLocation": "./.yarn/cache/natural-compare-npm-1.4.0-97b75b362d-23ad088b08.zip/node_modules/natural-compare/",
@@ -1767,7 +1779,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-config-airbnb-typescript", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:16.1.0"],
             ["eslint-config-prettier", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:8.3.0"],
             ["eslint-plugin-import", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:2.25.4"],
+            ["nano-staged", "npm:0.5.0"],
             ["prettier", "npm:2.5.1"],
+            ["simple-git-hooks", "npm:2.7.0"],
             ["typescript", "patch:typescript@npm%3A4.5.4#~builtin<compat/typescript>::version=4.5.4&hash=493e53"]
           ],
           "linkType": "SOFT",
@@ -1868,6 +1882,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/path-type-npm-4.0.0-10d47fc86a-5b1e2daa24.zip/node_modules/path-type/",
           "packageDependencies": [
             ["path-type", "npm:4.0.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["picocolors", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/picocolors-npm-1.0.0-d81e0b1927-a2e8092dd8.zip/node_modules/picocolors/",
+          "packageDependencies": [
+            ["picocolors", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -2029,6 +2052,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["call-bind", "npm:1.0.2"],
             ["get-intrinsic", "npm:1.1.1"],
             ["object-inspect", "npm:1.12.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["simple-git-hooks", [
+        ["npm:2.7.0", {
+          "packageLocation": "./.yarn/unplugged/simple-git-hooks-npm-2.7.0-a91e5fa27a/node_modules/simple-git-hooks/",
+          "packageDependencies": [
+            ["simple-git-hooks", "npm:2.7.0"]
           ],
           "linkType": "HARD",
         }]

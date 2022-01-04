@@ -15,9 +15,10 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
-    "lint:fix": "yarn lint --fix"
+    "lint:fix": "yarn lint --fix",
+    "postinstall": "simple-git-hooks",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
-  "packageManager": "yarn@3.1.1",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
     "@typescript-eslint/parser": "^5.0.0",
@@ -26,7 +27,18 @@
     "eslint-config-airbnb-typescript": "^16.1.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.25.2",
+    "nano-staged": "^0.5.0",
     "prettier": "^2.5.1",
+    "simple-git-hooks": "^2.7.0",
     "typescript": "^4.5.4"
-  }
+  },
+  "nano-staged": {
+    "*": "prettier --ignore-unknown --write",
+    "*.{ts,tsx}": "bash -c yarn type-check",
+    "*.{js,ts,tsx}": "eslint --fix"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "yarn nano-staged"
+  },
+  "packageManager": "yarn@3.1.1"
 }
