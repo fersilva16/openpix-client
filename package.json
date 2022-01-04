@@ -1,0 +1,17 @@
+{
+  "name": "openpix",
+  "description": "OpenPIX API client for JavaScript",
+  "author": "Fernando Silva <hello@fersilva.dev>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fersilva16/openpix-client.git"
+  },
+  "bugs": {
+    "url": "https://github.com/fersilva16/openpix-client/issues"
+  },
+  "homepage": "https://github.com/fersilva16/fersilva.dev#readme",
+  "license": "MIT",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}
