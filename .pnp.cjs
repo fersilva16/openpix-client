@@ -37,6 +37,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@typescript-eslint/eslint-plugin", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:5.9.0"],
             ["@typescript-eslint/parser", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:5.9.0"],
+            ["axios", "npm:0.24.0"],
             ["eslint", "npm:8.6.0"],
             ["eslint-config-airbnb-base", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:15.0.0"],
             ["eslint-config-airbnb-typescript", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:16.1.0"],
@@ -457,6 +458,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["call-bind", "npm:1.0.2"],
             ["define-properties", "npm:1.1.3"],
             ["es-abstract", "npm:1.19.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["axios", [
+        ["npm:0.24.0", {
+          "packageLocation": "./.yarn/cache/axios-npm-0.24.0-39e5c1e79e-468cf496c0.zip/node_modules/axios/",
+          "packageDependencies": [
+            ["axios", "npm:0.24.0"],
+            ["follow-redirects", "virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.6"]
           ],
           "linkType": "HARD",
         }]
@@ -1164,6 +1175,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["follow-redirects", [
+        ["npm:1.14.6", {
+          "packageLocation": "./.yarn/cache/follow-redirects-npm-1.14.6-0483823f49-7fcdb089a7.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "npm:1.14.6"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.6", {
+          "packageLocation": "./.yarn/__virtual__/follow-redirects-virtual-9f3f408215/0/cache/follow-redirects-npm-1.14.6-0483823f49-7fcdb089a7.zip/node_modules/follow-redirects/",
+          "packageDependencies": [
+            ["follow-redirects", "virtual:39e5c1e79ea63134f0cf339f4463df92854aaf708a45210afd29a0b4b9f67f95b34a1abbcabaae6d0033ad99a1d5f690ab51ed8e5d3283b87ccbc3a9ab3ec05f#npm:1.14.6"],
+            ["@types/debug", null],
+            ["debug", null]
+          ],
+          "packagePeers": [
+            "@types/debug",
+            "debug"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["fs.realpath", [
         ["npm:1.0.0", {
           "packageLocation": "./.yarn/cache/fs.realpath-npm-1.0.0-c8f05d8126-99ddea01a7.zip/node_modules/fs.realpath/",
@@ -1775,6 +1808,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["openpix", "workspace:."],
             ["@typescript-eslint/eslint-plugin", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:5.9.0"],
             ["@typescript-eslint/parser", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:5.9.0"],
+            ["axios", "npm:0.24.0"],
             ["eslint", "npm:8.6.0"],
             ["eslint-config-airbnb-base", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:15.0.0"],
             ["eslint-config-airbnb-typescript", "virtual:c1c102fa7c262b03ca789e471ea2c90261d5266ca6f28b9289fbf6ed0fddfa50462c5be60d31b31623614153bb5aa44845eff5a6ccd9c282143684409073b819#npm:16.1.0"],
