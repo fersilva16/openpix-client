@@ -26,6 +26,11 @@ import type {
 } from './types/customer/endpoints/CreateCustomer';
 import type { GetCustomerResponse } from './types/customer/endpoints/GetCustomer';
 import type { ListCustomersResponse } from './types/customer/endpoints/ListCustomers';
+import type { GetTransactionResponse } from './types/transaction/endpoints/GetTransaction';
+import type {
+  ListTransactionsParameters,
+  ListTransactionsResponse,
+} from './types/transaction/endpoints/ListTransactions';
 
 export class OpenPIX {
   constructor(
@@ -88,6 +93,16 @@ export class OpenPIX {
     return this.request<CreateCustomerResponse>('/customer', {
       method: 'POST',
       data: args,
+    });
+  }
+
+  async getTransaction(id: string): Promise<GetTransactionResponse> {
+    return this.request<GetTransactionResponse>(`/transaction/${id}`);
+  }
+
+  async listTransactions(args: ListTransactionsParameters): Promise<ListTransactionsResponse> {
+    return this.request<ListTransactionsResponse>(`/transaction`, {
+      params: args,
     });
   }
 

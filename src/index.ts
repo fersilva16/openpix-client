@@ -30,3 +30,9 @@ export type {
 } from './types/refund/endpoints/CreateRefund';
 export type { GetRefundResponse } from './types/refund/endpoints/GetRefund';
 export type { ListRefundsResponse } from './types/refund/endpoints/ListRefunds';
+export type { Transaction } from './types/transaction/Transaction';
+export type { GetTransactionResponse } from './types/transaction/endpoints/GetTransaction';
+export type {
+  ListTransactionsParameters,
+  ListTransactionsResponse,
+} from './types/transaction/endpoints/ListTransactions';
