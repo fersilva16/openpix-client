@@ -36,3 +36,10 @@ export type {
   ListTransactionsParameters,
   ListTransactionsResponse,
 } from './types/transaction/endpoints/ListTransactions';
+export type { Webhook } from './types/webhook/Webhook';
+export type {
+  CreateWebhookParameters,
+  CreateWebhookResponse,
+} from './types/webhook/endpoints/CreateWebhook';
+export type { DeleteWebhookResponse } from './types/webhook/endpoints/DeleteWebhook';
+export type { ListWebhooksResponse } from './types/webhook/endpoints/ListWebhooks';

@@ -31,6 +31,12 @@ import type {
   ListTransactionsParameters,
   ListTransactionsResponse,
 } from './types/transaction/endpoints/ListTransactions';
+import type {
+  CreateWebhookParameters,
+  CreateWebhookResponse,
+} from './types/webhook/endpoints/CreateWebhook';
+import type { DeleteWebhookResponse } from './types/webhook/endpoints/DeleteWebhook';
+import type { ListWebhooksResponse } from './types/webhook/endpoints/ListWebhooks';
 
 export class OpenPIX {
   constructor(
@@ -71,7 +77,7 @@ export class OpenPIX {
   }
 
   async listRefunds(): Promise<ListRefundsResponse> {
-    return this.request<ListRefundsResponse>(`/refund`);
+    return this.request<ListRefundsResponse>('/refund');
   }
 
   async createRefund(args: CreateRefundParameters): Promise<CreateRefundResponse> {
@@ -86,7 +92,7 @@ export class OpenPIX {
   }
 
   async listCustomers(): Promise<ListCustomersResponse> {
-    return this.request<ListCustomersResponse>(`/customer`);
+    return this.request<ListCustomersResponse>('/customer');
   }
 
   async createCustomer(args: CreateCustomerParameters): Promise<CreateCustomerResponse> {
@@ -101,8 +107,29 @@ export class OpenPIX {
   }
 
   async listTransactions(args: ListTransactionsParameters): Promise<ListTransactionsResponse> {
-    return this.request<ListTransactionsResponse>(`/transaction`, {
+    return this.request<ListTransactionsResponse>('/transaction', {
       params: args,
+    });
+  }
+
+  async listWebhooks(url?: string): Promise<ListWebhooksResponse> {
+    return this.request<ListWebhooksResponse>('/webhook', {
+      params: {
+        url,
+      },
+    });
+  }
+
+  async createWebhook(args: CreateWebhookParameters): Promise<CreateWebhookResponse> {
+    return this.request<CreateWebhookResponse>('/webhook', {
+      method: 'POST',
+      data: args,
+    });
+  }
+
+  async deleteWebhook(id: string): Promise<DeleteWebhookResponse> {
+    return this.request<DeleteWebhookResponse>(`/webhook/${id}`, {
+      method: 'DELETE',
     });
   }
 
