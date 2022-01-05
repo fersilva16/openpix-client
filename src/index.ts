@@ -17,6 +17,12 @@ export type {
   ListChargesResponse,
 } from './types/charge/endpoints/ListCharges';
 export type { Customer, TaxID } from './types/customer/Customer';
+export type {
+  CreateCustomerParameters,
+  CreateCustomerResponse,
+} from './types/customer/endpoints/CreateCustomer';
+export type { GetCustomerResponse } from './types/customer/endpoints/GetCustomer';
+export type { ListCustomersResponse } from './types/customer/endpoints/ListCustomers';
 export type { Refund, RefundStatus } from './types/refund/Refund';
 export type {
   CreateRefundParameters,
