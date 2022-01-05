@@ -37,6 +37,12 @@ import type {
 } from './types/webhook/endpoints/CreateWebhook';
 import type { DeleteWebhookResponse } from './types/webhook/endpoints/DeleteWebhook';
 import type { ListWebhooksResponse } from './types/webhook/endpoints/ListWebhooks';
+import type {
+  CreatePixQrCodeParameters,
+  CreatePixQrCodeResponse,
+} from './types/pixQrCode/endpoints/CreatePixQrCode';
+import type { GetPixQrCodeResponse } from './types/pixQrCode/endpoints/GetPixQrCode';
+import type { ListPixQrCodesResponse } from './types/pixQrCode/endpoints/ListPixQrCodes';
 
 export class OpenPIX {
   constructor(
@@ -130,6 +136,21 @@ export class OpenPIX {
   async deleteWebhook(id: string): Promise<DeleteWebhookResponse> {
     return this.request<DeleteWebhookResponse>(`/webhook/${id}`, {
       method: 'DELETE',
+    });
+  }
+
+  async getPixQrCode(id: string): Promise<GetPixQrCodeResponse> {
+    return this.request<GetPixQrCodeResponse>(`/pixQrCode-static/${id}`);
+  }
+
+  async listPixQrCodes(): Promise<ListPixQrCodesResponse> {
+    return this.request<ListPixQrCodesResponse>('/qrcode-static');
+  }
+
+  async createPixQrCode(args: CreatePixQrCodeParameters): Promise<CreatePixQrCodeResponse> {
+    return this.request<CreatePixQrCodeResponse>('/qrcode-static', {
+      method: 'POST',
+      data: args,
     });
   }
 

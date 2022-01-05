@@ -43,3 +43,10 @@ export type {
 } from './types/webhook/endpoints/CreateWebhook';
 export type { DeleteWebhookResponse } from './types/webhook/endpoints/DeleteWebhook';
 export type { ListWebhooksResponse } from './types/webhook/endpoints/ListWebhooks';
+export type { PixQrCode } from './types/pixQrCode/PixQrCode';
+export type {
+  CreatePixQrCodeParameters,
+  CreatePixQrCodeResponse,
+} from './types/pixQrCode/endpoints/CreatePixQrCode';
+export type { GetPixQrCodeResponse } from './types/pixQrCode/endpoints/GetPixQrCode';
+export type { ListPixQrCodesResponse } from './types/pixQrCode/endpoints/ListPixQrCodes';
