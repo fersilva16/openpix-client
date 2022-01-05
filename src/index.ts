@@ -17,3 +17,10 @@ export type {
   ListChargesResponse,
 } from './types/charge/endpoints/ListCharges';
 export type { Customer, TaxID } from './types/customer/Customer';
+export type { Refund, RefundStatus } from './types/refund/Refund';
+export type {
+  CreateRefundParameters,
+  CreateRefundResponse,
+} from './types/refund/endpoints/CreateRefund';
+export type { GetRefundResponse } from './types/refund/endpoints/GetRefund';
+export type { ListRefundsResponse } from './types/refund/endpoints/ListRefunds';

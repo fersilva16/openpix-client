@@ -1,16 +1,25 @@
 import axios, { AxiosRequestConfig } from 'axios';
 
 import { OpenPIXError } from './OpenPixError';
-import {
+import type {
   CreateChargeParameters,
   CreateChargeResponse,
 } from './types/charge/endpoints/CreateCharge';
-import { GetChargeResponse } from './types/charge/endpoints/GetCharge';
-import {
+import type { GetChargeResponse } from './types/charge/endpoints/GetCharge';
+import type {
   GetQrCodeFromChargeParameters,
   GetQrCodeFromChargeResponse,
 } from './types/charge/endpoints/GetQrCodeFromCharge';
-import { ListChargesParameters, ListChargesResponse } from './types/charge/endpoints/ListCharges';
+import type {
+  ListChargesParameters,
+  ListChargesResponse,
+} from './types/charge/endpoints/ListCharges';
+import type {
+  CreateRefundParameters,
+  CreateRefundResponse,
+} from './types/refund/endpoints/CreateRefund';
+import type { GetRefundResponse } from './types/refund/endpoints/GetRefund';
+import type { ListRefundsResponse } from './types/refund/endpoints/ListRefunds';
 
 export class OpenPIX {
   constructor(
@@ -43,6 +52,21 @@ export class OpenPIX {
       params: {
         size: size?.toString(),
       },
+    });
+  }
+
+  async getRefund(id: string): Promise<GetRefundResponse> {
+    return this.request<GetRefundResponse>(`/refund/${id}`);
+  }
+
+  async listRefunds(): Promise<ListRefundsResponse> {
+    return this.request<ListRefundsResponse>(`/refund`);
+  }
+
+  async createRefund(args: CreateRefundParameters): Promise<CreateRefundResponse> {
+    return this.request<CreateRefundResponse>('/refund', {
+      method: 'POST',
+      data: args,
     });
   }
 
