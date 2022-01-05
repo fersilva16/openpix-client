@@ -43,6 +43,15 @@ import type {
 } from './types/pixQrCode/endpoints/CreatePixQrCode';
 import type { GetPixQrCodeResponse } from './types/pixQrCode/endpoints/GetPixQrCode';
 import type { ListPixQrCodesResponse } from './types/pixQrCode/endpoints/ListPixQrCodes';
+import type { ConfirmPaymentResponse } from './types/payment/endpoints/ConfirmPayment';
+import type {
+  CreatePaymentWithPixKeyParameters,
+  CreatePaymentWithPixKeyResponse,
+} from './types/payment/endpoints/CreatePaymentWithPixKey';
+import type {
+  CreatePaymentWithQrCodeParameters,
+  CreatePaymentWithQrCodeResponse,
+} from './types/payment/endpoints/CreatePaymentWithQrCode';
 
 export class OpenPIX {
   constructor(
@@ -149,6 +158,33 @@ export class OpenPIX {
 
   async createPixQrCode(args: CreatePixQrCodeParameters): Promise<CreatePixQrCodeResponse> {
     return this.request<CreatePixQrCodeResponse>('/qrcode-static', {
+      method: 'POST',
+      data: args,
+    });
+  }
+
+  async confirmPayment(correlationID: string): Promise<ConfirmPaymentResponse> {
+    return this.request<ConfirmPaymentResponse>('/pay/confirm', {
+      method: 'POST',
+      data: {
+        correlationID,
+      },
+    });
+  }
+
+  async createPaymentWithPixKey(
+    args: CreatePaymentWithPixKeyParameters,
+  ): Promise<CreatePaymentWithPixKeyResponse> {
+    return this.request<CreatePaymentWithPixKeyResponse>('/pay/pix-key', {
+      method: 'POST',
+      data: args,
+    });
+  }
+
+  async createPaymentWithQrCode(
+    args: CreatePaymentWithQrCodeParameters,
+  ): Promise<CreatePaymentWithQrCodeResponse> {
+    return this.request<CreatePaymentWithQrCodeResponse>('/pay/qrcode', {
       method: 'POST',
       data: args,
     });

@@ -2,6 +2,7 @@ export { OpenPIX } from './OpenPIX';
 export { OpenPIXError } from './OpenPixError';
 export type { AdditionalInfo } from './types/AdditionalInfo';
 export type { PageInfo, PageInfoError, PageInfoErrorData } from './types/PageInfo';
+export type { PixKeyType } from './types/PixKeyType';
 export type { Charge, ChargeStatus } from './types/charge/Charge';
 export type {
   CreateChargeParameters,
@@ -50,3 +51,16 @@ export type {
 } from './types/pixQrCode/endpoints/CreatePixQrCode';
 export type { GetPixQrCodeResponse } from './types/pixQrCode/endpoints/GetPixQrCode';
 export type { ListPixQrCodesResponse } from './types/pixQrCode/endpoints/ListPixQrCodes';
+export type { DestinationAccount } from './types/payment/DestinationAccount';
+export type { PayConfirmPayment } from './types/payment/PayConfirmPayment';
+export type { PaymentPixKey } from './types/payment/PaymentPixKey';
+export type { PaymentStatus } from './types/payment/PaymentStatus';
+export type { ConfirmPaymentResponse } from './types/payment/endpoints/ConfirmPayment';
+export type {
+  CreatePaymentWithPixKeyParameters,
+  CreatePaymentWithPixKeyResponse,
+} from './types/payment/endpoints/CreatePaymentWithPixKey';
+export type {
+  CreatePaymentWithQrCodeParameters,
+  CreatePaymentWithQrCodeResponse,
+} from './types/payment/endpoints/CreatePaymentWithQrCode';
