@@ -2,6 +2,13 @@
   "name": "openpix",
   "description": "OpenPIX API client for JavaScript",
   "author": "Fernando Silva <hello@fersilva.dev>",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    "import": "./dist/index.mjs",
+    "require": "./dist/index.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/fersilva16/openpix-client.git"
@@ -12,6 +19,7 @@
   "homepage": "https://github.com/fersilva16/openpix-client#readme",
   "license": "MIT",
   "scripts": {
+    "build": "tsup",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint .",
@@ -20,7 +28,8 @@
     "type-check": "tsc --project tsconfig.json --pretty --noEmit"
   },
   "dependencies": {
-    "axios": "^0.24.0"
+    "axios": "^0.24.0",
+    "tsup": "^5.11.11"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.0.0",
@@ -44,5 +53,10 @@
   "simple-git-hooks": {
     "pre-commit": "yarn nano-staged"
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "dependenciesMeta": {
+    "tsup@5.11.11": {
+      "unplugged": true
+    }
+  }
 }
